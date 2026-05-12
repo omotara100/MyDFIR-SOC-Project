@@ -61,17 +61,17 @@ network.host: 216.128.178.X
 http.port: 9200
 
 ## 🔹 Purpose of Changes
-Allowed Elasticsearch to listen on the server network interface
-Enabled HTTP communication on port 9200
-Prepared the server for remote management and log ingestion
+- Allowed Elasticsearch to listen on the server network interface
+- Enabled HTTP communication on port 9200
+- Prepared the server for remote management and log ingestion
 
 ## 🔥 Firewall Configuration
 
 Configured a Firewall Group in Vultr to secure Elasticsearch access.
 
 ## 🔹 Firewall Rules
-Allowed inbound traffic only from my personal IP address
-Restricted unauthorized access to Elasticsearch
+- Allowed inbound traffic only from my personal IP address
+- Restricted unauthorized access to Elasticsearch
 
 ## 🔹 Security Benefit
 
@@ -94,15 +94,16 @@ Confirmed:
 Elasticsearch service was active
 Service successfully started without errors
 
-📸 Screenshots
-🔹 Elasticsearch Instance Deployment
+### 🔹 Elasticsearch Instance Deployment
+![ELK Instance](https://raw.githubusercontent.com/omotara100/MyDFIR-SOC-Project/main/screenshots/Elasticsearch-Instance-Deployment.png)
 
-🔹 Vultr VPC Configuration
+### 🔹 Vultr VPC Configuration
+![VPC Setup](https://raw.githubusercontent.com/omotara100/MyDFIR-SOC-Project/main/screenshots/Vultr-VPC-Configuration.png)
 
-🎯 Key Takeaways
-Successfully deployed Elasticsearch in a cloud environment
-Configured private networking using Vultr VPC
-Implemented firewall restrictions for secure access
-Verified operational readiness of the SIEM backend infrastructure
+## 🎯 Key Takeaways
+- Successfully deployed Elasticsearch in a cloud environment
+- Configured private networking using Vultr VPC
+- Implemented firewall restrictions for secure access
+- Verified operational readiness of the SIEM backend infrastructure
 
 This deployment established the foundation for centralized log collection, threat detection, and future SOC operations within the lab environment.
