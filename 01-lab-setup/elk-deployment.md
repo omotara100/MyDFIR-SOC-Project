@@ -31,8 +31,6 @@ To deploy and configure an Elasticsearch instance in a cloud environment for cen
 ## 🔐 Accessing the Server
 
 Connected to the Elasticsearch server remotely using SSH from PowerShell:
-
-```bash
 ssh root@216.128.178.215
 
 ---
@@ -40,63 +38,62 @@ ssh root@216.128.178.215
 ## 🔄 System Preparation
 
 Updated and upgraded the Ubuntu server packages:
-
-```bash
 apt update && apt upgrade -y
 
-📦 Elasticsearch Installation
+## 📦 Elasticsearch Installation
 1. Download Elasticsearch Package
 
 Downloaded the Elasticsearch .deb package from the official Elastic website using wget.
-
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.x.x-amd64.deb
+
 2. Install Elasticsearch
 
 Installed the package using dpkg:
-
 dpkg -i elasticsearch-8.x.x-amd64.deb
-⚙️ Elasticsearch Configuration
+ 
+## ⚙️ Elasticsearch Configuration
 
 Modified the Elasticsearch configuration file:
-
 nano /etc/elasticsearch/elasticsearch.yml
 
 Updated the following settings:
-
-network.host: 172.31.0.X
+network.host: 216.128.178.X
 http.port: 9200
-🔹 Purpose of Changes
+
+## 🔹 Purpose of Changes
 Allowed Elasticsearch to listen on the server network interface
 Enabled HTTP communication on port 9200
 Prepared the server for remote management and log ingestion
-🔥 Firewall Configuration
+
+## 🔥 Firewall Configuration
 
 Configured a Firewall Group in Vultr to secure Elasticsearch access.
 
-🔹 Firewall Rules
+## 🔹 Firewall Rules
 Allowed inbound traffic only from my personal IP address
 Restricted unauthorized access to Elasticsearch
-🔹 Security Benefit
+
+## 🔹 Security Benefit
 
 This reduced the exposed attack surface while still allowing remote administration access.
 
-▶️ Starting Elasticsearch Service
+## ▶️ Starting Elasticsearch Service
 
 Reloaded system services and started Elasticsearch:
 
-systemctl daemon-reexec
+systemctl daemon-reload
 systemctl enable elasticsearch
 systemctl start elasticsearch
-✅ Verification
+
+## ✅ Verification
 
 Verified the Elasticsearch service status:
-
 systemctl status elasticsearch
 
 Confirmed:
-
 Elasticsearch service was active
 Service successfully started without errors
+
 📸 Screenshots
 🔹 Elasticsearch Instance Deployment
 
