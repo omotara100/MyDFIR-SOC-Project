@@ -19,8 +19,7 @@ The architecture includes:
 
 ## 🏗️ Architecture Diagram
 
-![Network Diagram](../screenshots/network-diagram.png)
-
+![Network Diagram](https://raw.githubusercontent.com/omotara100/MyDFIR-SOC-Project/main/screenshots/network-diagram.png)
 ---
 
 ## 🔧 Components Breakdown
