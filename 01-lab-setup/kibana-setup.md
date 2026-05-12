@@ -101,17 +101,17 @@ Confirmed:
 📸 Screenshots
 
 ## 🔹 Vultr Firewall Configuration
-![Vultr Firewall](https://raw.githubusercontent.com/omotara100/MyDFIR-SOC-Project/screenshots/kibana-firewall-rule.png)
+![Vultr Firewall](https://github.com/omotara100/MyDFIR-SOC-Project/blob/main/screenshots/kibana-firewall-rule.png) 
 
 ---
 
 ## 🔹 Ubuntu UFW Rule
-![Ubuntu UFW](https://raw.githubusercontent.com/omotara100/MyDFIR-SOC-Project/screenshots/ubuntu-ufw-rule.png)
+![Ubuntu UFW](https://github.com/omotara100/MyDFIR-SOC-Project/blob/main/screenshots/ubuntu-ufw-rule.png)
 
 ---
 
 ## 🔹 Kibana Login Page
-![Kibana Login](https://raw.githubusercontent.com/omotara100/MyDFIR-SOC-Project/screenshots/kibana-login-page.png)
+![Kibana Login](https://github.com/omotara100/MyDFIR-SOC-Project/blob/main/screenshots/kibana-login-page.png)
 
 ## 🔐 Security Considerations
 
