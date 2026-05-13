@@ -53,8 +53,10 @@ The architecture includes:
 ---
 
 ### 🔹 Windows Server (RDP Enabled)
-- Generates Windows event logs
-- Used to simulate attacks (e.g., brute force, malware)
+- Internet-facing Windows Server 2022 instance
+- Used to simulate brute-force attacks and suspicious authentication activity
+- Generates Windows event logs for ingestion into the ELK Stack
+- Intentionally separated from the private VPC network to simulate an externally exposed endpoint
 
 ---
 
