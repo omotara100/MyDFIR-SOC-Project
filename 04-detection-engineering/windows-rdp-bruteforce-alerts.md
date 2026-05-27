@@ -229,3 +229,180 @@ These detections improve:
 - Enhanced authentication monitoring across Linux and Windows environments
 
 This phase significantly expanded the SOC detection engineering capability within the lab environment and introduced SIEM-focused brute-force monitoring workflows.
+
+# 🌍 RDP Authentication Dashboards & Visualization
+
+## 📌 Objective
+To create Kibana dashboards and geolocation visualizations for monitoring failed and successful RDP authentication activity against the Windows Server endpoint.
+
+The dashboards provide:
+- Failed RDP authentication visibility
+- Successful RDP login monitoring
+- Geographic attack source visualization
+- Authentication telemetry analysis
+
+---
+
+# 🚨 Failed RDP Authentication Dashboard
+
+Navigated to:
+Analytics → Maps
+
+---
+
+# 🔹 Failed RDP Query
+
+Used the following KQL query:
+
+event.code: 4625 and agent.name: "MYDFIR-WINTee"
+
+This query identifies:
+
+- Failed Windows authentication attempts
+- Failed RDP login activity
+- Suspicious authentication behavior
+
+---
+
+## 🗺️ Geolocation Visualization
+
+Added a new layer using:
+
+Choropleth
+
+Selected:
+
+EMS Boundaries → World Countries
+
+This visualized:
+
+- Geographic origin of failed RDP authentication attempts
+- Source attack distribution by country
+
+---
+
+## 💾 Dashboard Save
+
+Saved the visualization as:
+
+RDP Failed Authentications
+
+Added the visualization to a dashboard successfully.
+
+---
+
+## 🔓 Successful RDP Authentication Monitoring
+
+Modified the query to identify successful RDP logins.
+
+---
+
+# 🔹 Successful RDP Query
+event.code: 4624 and (winlog.event_data.LogonType: 10 or winlog.event_data.LogonType: 7)
+
+---
+
+## 🧠 Logon Type Analysis
+Logon Type	       Description
+10	               Remote Interactive Logon (RDP)
+7	                 Unlock Workstation
+
+These events provide visibility into:
+
+- Successful remote desktop access
+- Interactive Windows logons
+- Legitimate authentication activity
+
+---
+
+## 🔍 Verification in Discover
+
+Executed the query in Kibana Discover and confirmed:
+
+- Successful RDP authentication events
+- User login telemetry
+- Source IP visibility
+Authentication event tracking
+
+---
+
+## 📊 Successful Authentication Dashboard
+
+Duplicated the failed RDP authentication dashboard and renamed it:
+
+RDP Successful Authentications
+
+Modified the dashboard query to monitor successful authentication activity.
+
+---
+
+## 📈 Authentication Activity Tables
+
+Created visualization tables containing:
+
+Field          	             Purpose
+user.name	                   Authenticated user
+source.ip	                   Source IP address
+source.geo.country_name	     Geographic source location
+
+These visualizations improved:
+
+- Authentication visibility
+- User activity tracking
+- Source attribution analysis
+
+  
+## ✅ Verification
+
+Confirmed:
+
+Failed RDP authentication dashboard operational
+Successful RDP authentication dashboard operational
+Geolocation mapping functioning correctly
+Authentication activity visualizations displaying properly
+Windows authentication telemetry searchable in Kibana
+
+
+## 🔹 RDP Failed Authentication Dashboard
+![RDP Failed Dashboard](https://raw.githubusercontent.com/omotara100/MyDFIR-SOC-Project/main/screenshots/rdp-failed-dashboard.png)
+
+---
+
+## 🔹 SSH Failed Authentication Table
+![SSH Failed Table](https://raw.githubusercontent.com/omotara100/MyDFIR-SOC-Project/main/screenshots/ssh-failed-auth-table.png)
+
+---
+
+## 🔹 SSH Successful Authentication Table
+![SSH Successful Table](https://raw.githubusercontent.com/omotara100/MyDFIR-SOC-Project/main/screenshots/ssh-success-auth-table.png)
+
+---
+
+## 🔹 RDP Failed Authentication Table
+![RDP Failed Table](https://raw.githubusercontent.com/omotara100/MyDFIR-SOC-Project/main/screenshots/rdp-failed-auth-table.png)
+
+---
+
+## 🔹 RDP Successful Authentication Table
+![RDP Successful Table](https://raw.githubusercontent.com/omotara100/MyDFIR-SOC-Project/main/screenshots/rdp-success-auth-table.png)
+
+## 🔐 Security Value
+
+These dashboards improve:
+
+- RDP brute-force visibility
+- Authentication monitoring
+- Geographic attack source analysis
+- User activity visibility
+- SOC investigation workflows
+
+---
+
+## 🎯 Key Takeaways
+- Created RDP authentication monitoring dashboards
+- Visualized failed and successful RDP activity
+- Leveraged Windows Event IDs 4624 and 4625
+- Implemented geolocation analysis using Elastic Maps
+- Enhanced authentication monitoring visibility within the SOC environment
+
+This phase expanded the detection engineering capability by introducing Windows authentication dashboards and attack-source visualization workflows.
