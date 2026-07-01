@@ -56,7 +56,7 @@ This lab consists of:
 - `02-log-ingestion/` → Winlogbeat & Sysmon configuration  
 - `03-attack-simulation/` → Brute force and malware testing  
 - `04-detection-engineering/` → Detection rules & dashboards  
-- `05-threat-hunting/` → C2 investigation using Mythic  
+- `05-case management/` → Case management  
 - `06-incident-response/` → Incident reports and case handling  
 - `screenshots/` → Supporting visuals  
 
